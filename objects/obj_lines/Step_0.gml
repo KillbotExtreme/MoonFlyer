@@ -1,6 +1,7 @@
 /// @description control point position 
 // You can write your code in this editor
 
+_speed += 0.001;
 //close game
 if keyboard_check(vk_escape){
 	game_end();

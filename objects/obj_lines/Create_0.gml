@@ -4,10 +4,11 @@
 //side scroller with randomly generated levels built from lines determined by co-ords
 
 //initial variables
-_speed = 8;
+_speed = 6;
 _sep =128;
 num=32;
 _lineSep = 64;
+_score = 0;
 
 enum WINDOW{
 	WIDTH = 1920,

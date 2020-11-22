@@ -13,3 +13,7 @@ _rotation = 90;
 _deadLen = 0;
 _deadLen2 = 500;
 _score = 0;
+_shot = 0;
+_shooting = 0;
+_shootLen = 32;
+_reload = 64;

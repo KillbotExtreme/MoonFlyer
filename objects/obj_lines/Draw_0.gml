@@ -1,6 +1,12 @@
 /// @description connect points
 // You can write your code in this editor
-
+if (!instance_exists(obj_rocket)){
+	draw_set_font(Font1);
+	draw_set_halign(fa_center);
+	draw_set_color(c_green);
+	draw_text(WINDOW.WIDTH/2, WINDOW.HEIGHT/2-64, "Press R to Restart");
+	draw_text(WINDOW.WIDTH/2, WINDOW.HEIGHT/2-128, "Score: " + string(_score));
+}
 
 
 for (var i = 0; i <num; i++){

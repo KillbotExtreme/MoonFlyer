@@ -41,7 +41,7 @@ if (!(y > 450 && y < 550)){
 		var i = instance_create_layer(_lDX, _lDY, "Instances", obj_bullet);
 		with (i){
 			direction = other.image_angle;
-			speed = 10;
+			speed = 8;
 			hspeed -= obj_lines._speed;
 		}
 	}

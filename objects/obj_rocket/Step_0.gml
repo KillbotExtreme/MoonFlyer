@@ -6,6 +6,7 @@ if (_dead == false){
 	_left = (keyboard_check(vk_left) || keyboard_check(ord("A")));
 	_right = (keyboard_check(vk_right) || keyboard_check(ord("D")));
 	_up = (keyboard_check(vk_up) || keyboard_check(ord("W")));
+	_shoot = (keyboard_check(vk_space)||keyboard_check(vk_control)||keyboard_check(vk_shift));
 	_rotation += ((_left - _right) * _rotationSpeed);
 	image_angle = _rotation;
 
@@ -39,6 +40,27 @@ if (_dead == false){
 	//spawn walls
 	if (irandom(640) == 1){
 		instance_create_layer(WINDOW.WIDTH, WINDOW.HEIGHT / 2, "Instances", obj_laser);
+	}
+	//shooting
+	if (_shoot){
+		if (!_shot){
+			_shooting = 1;
+			_shot = 1;
+		}
+	}
+	if (_shot){
+		if (_shooting){
+			_shootLen--;
+			if (_shootLen <= 0){
+				_shooting = 0;
+				_shootLen = 32;
+			}
+		}
+		_reload --;
+		if (_reload <= 0){
+			_reload = 64;
+			_shot = 0;
+		}
 	}
 }
 else{
