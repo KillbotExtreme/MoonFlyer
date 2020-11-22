@@ -21,8 +21,6 @@ for (var i = 0; i <num; i++){
 			with (obj_rocket) {
 				if (_dead == false){
 					_dead = true;
-					hspeed += other._speed;
-					speed = -speed;
 				}
 			}
 		}
@@ -44,8 +42,6 @@ for (var i = 0; i <num; i++){
 			with (obj_rocket) {
 				if (_dead == false){
 					_dead = true;
-					hspeed += other._speed;
-					speed = -speed;
 				}
 			}
 		}
